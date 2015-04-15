@@ -22,3 +22,10 @@ This means that our base case would look like this - remember that we are assumi
 `head = currentNode;` <br>
 `return; //since this is the base case` <br>
 `}`
+
+#Coming Up with a Recursive Case
+Now that we've come up with a base case in Java, what about the recursive case? Well, in the recursive case we will clearly need to change the pointers so that the nodes are reversed. For a given node - let's say we are dealing with node 99 in the linked list image above - the Node coming after 99 (node 37) is represented by Node 99 -> next. If we want node 37 to point back to node 99 (which is what we would want if we are reversing the nodes), then we would set the next pointer of node 37 to point back to node 99, which in pseudocode would look like Node99 -> next = Node 99.
+
+We would also need to get rid of the pointer from node 99 to node 37 so we would have to set Node 99 -> next to NULL.
+
+So now we come up with code that would be our final recursive answer to the problem of reversing a singly linked list.
